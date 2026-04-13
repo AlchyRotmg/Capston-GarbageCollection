@@ -37,7 +37,7 @@ let cachedZonesPromise;
 
 async function getZonesData() {
   if (!cachedZonesPromise) {
-    cachedZonesPromise = fetch('/zones.geojson').then((response) => response.json());
+    cachedZonesPromise = fetch(`${import.meta.env.BASE_URL}zones.geojson`).then((response) => response.json());
   }
   return cachedZonesPromise;
 }

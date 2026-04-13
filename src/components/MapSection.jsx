@@ -19,7 +19,7 @@ function MapSection({ selectedZone, setSelectedZone, selectedCoords }) {
   const [zonesData, setZonesData] = useState(null);
 
   useEffect(() => {
-    fetch('/zones.geojson')
+    fetch(`${import.meta.env.BASE_URL}zones.geojson`)
       .then((response) => response.json())
       .then(setZonesData)
       .catch(() => setZonesData(null));
