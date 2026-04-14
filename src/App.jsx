@@ -59,9 +59,7 @@ function App() {
             <p className="eyebrow">Search by collection zone</p>
             <h2>Find garbage collection details by civic address</h2>
             <p className="hero-copy">
-              Enter your civic address below and select the matching result. This version keeps your existing
-              frontend shell, but now shows one next scheduled pickup plus whether that week is fibres or
-              containers.
+              Enter your street name below and select the matching result..
             </p>
           </section>
 
