@@ -59,7 +59,7 @@ function App() {
             <p className="eyebrow">Search by collection zone</p>
             <h2>Find garbage collection details by civic address</h2>
             <p className="hero-copy">
-              Enter your street name below and select the matching result..
+              Enter your street name below and select the matching result.
             </p>
           </section>
 
