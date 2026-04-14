@@ -1,8 +1,8 @@
 function Footer() {
   return (
     <footer className="footer-bar">
-      <span>Frontend mirrored to the municipal lookup style.</span>
-      <span>[Placeholder: production footer links / metadata]</span>
+      <span>CR2980 Capstone Project - 2026</span>
+      <span>Corbin, Blade, Liam, Nick</span>
     </footer>
   );
 }
