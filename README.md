@@ -1,26 +1,27 @@
-# React + Vite
+# Corner Brook Garbage Collection App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is set up to deploy on **GitHub Pages without gh-pages**.
 
-Currently, two official plugins are available:
+## Publish on GitHub Pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. In the project folder run:
+   ```bash
+   npm install
+   npm run build
+   ```
+2. Commit and push the generated `docs` folder to GitHub.
+3. In GitHub go to **Settings → Pages**.
+4. Set the source to **Deploy from a branch**.
+5. Choose:
+   - **Branch:** `main`
+   - **Folder:** `/docs`
+6. Save.
 
-## React Compiler
+The app uses relative asset paths, so it does not need a hardcoded repository name in `vite.config.js`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Development
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-## GitHub Pages deployment
-
-This project is configured for GitHub Pages.
-
-1. Update the `base` value in `vite.config.js` to match your repository name if needed.
-2. Install dependencies with `npm install`.
-3. Deploy with `npm run deploy`.
-
-The `deploy` script publishes the `dist` folder to the `gh-pages` branch.
+```bash
+npm install
+npm run dev
+```
