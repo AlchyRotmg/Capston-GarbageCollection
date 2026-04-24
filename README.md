@@ -1,25 +1,39 @@
-# Corner Brook Garbage Collection App
+# Corner Brook Garbage Collection Dashboard
 
-This project is set up to deploy on **GitHub Pages without gh-pages**.
+A lightweight geospatial decision-support tool for turning a Corner Brook civic address into a clear collection-zone result, an upcoming pickup date, and a readable service view.
 
-## Publish on GitHub Pages
+This project frames municipal waste collection as a spatial data problem. It links address search, geographic zone boundaries, and calendar rules into one interface so residents can move from location input to service insight in a few seconds.
 
-1. In the project folder run:
-   ```bash
-   npm install
-   npm run build
-   ```
-2. Commit and push the generated `docs` folder to GitHub.
-3. In GitHub go to **Settings → Pages**.
-4. Set the source to **Deploy from a branch**.
-5. Choose:
-   - **Branch:** `main`
-   - **Folder:** `/docs`
-6. Save.
+## Project Snapshot
 
-The app uses relative asset paths, so it does not need a hardcoded repository name in `vite.config.js`.
+| Input | Transformation | Output |
+| --- | --- | --- |
+| Civic address | Geocoding + point-in-polygon zone matching | Collection zone |
+| Zone assignment | Schedule lookup | Next pickup date |
+| Schedule data | Map and calendar rendering | Resident-facing decision support |
 
-## Development
+## Analytical Workflow
+
+From a data science perspective, the application behaves like a compact spatial analytics pipeline:
+1. Search for a Corner Brook address.
+2. Convert the search result into coordinates.
+3. Match those coordinates against local collection-zone polygons.
+4. Retrieve the correct collection schedule for the resolved zone.
+5. Present the outcome through synchronized map and calendar views.
+
+## Core Features
+
+- Address lookup with Corner Brook-focused search behavior
+- Geographic zone classification using local boundary data
+- Interactive Leaflet map for visual validation of service areas
+- Calendar-based pickup schedule display with recycling context
+- Local browser persistence for selected address and zone
+
+## Tech Stack
+
+React and Vite power the interface, Leaflet handles spatial visualization, and local zone and schedule datasets provide the service logic behind the dashboard.
+
+## Run Locally
 
 ```bash
 npm install
